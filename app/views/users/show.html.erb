@@ -1,0 +1,11 @@
+<% if !notice.nil? %>
+  <div class="well"><%= notice %></div>
+<% end %>
+
+<%= gravatar_for @user %>
+
+<p>User <%= @user.name %></p>
+<p>Email <%= @user.email %></p>
+
+</p><%= link_to 'Edit profile', edit_user_path %> |
+<%= link_to 'Delete profile', user_path(@user), method: :delete %></p>
